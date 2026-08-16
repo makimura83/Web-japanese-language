@@ -67,7 +67,7 @@ function shuffle(array) {
 async function loadData(type) {
   if (dataCache[type]) return dataCache[type]; // มีแคชแล้ว ใช้เลย ไม่ต้องขอเน็ตเวิร์กซ้ำ
 
-  const path = type === 'vocab' ? '../src/data/n5_vocab.json' : '../src/data/n5_grammar.json';
+  const path = type === 'vocab' ? '../data/n5_vocab.json' : '../data/n5_grammar.json';
   const res = await fetch(path);
   if (!res.ok) throw new Error(`โหลดข้อมูลไม่สำเร็จ: ${path}`);
 

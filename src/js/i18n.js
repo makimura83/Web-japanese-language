@@ -25,7 +25,7 @@ function getSavedLang() {
 // ดึงไฟล์ JSON ของภาษานั้นๆ มาแปลงเป็น object ด้วย fetch (เหมือนขอไฟล์จากเซิร์ฟเวอร์)
 // path เป็น ../ เพราะสคริปต์นี้ถูกเรียกใช้จากหน้าใน pages/ เสมอ
 async function loadDictionary(lang) {
-  const res = await fetch(`../src/data/lang/${lang}.json`);
+  const res = await fetch(`../data/lang/${lang}.json`);
   if (!res.ok) {
     throw new Error(`โหลดไฟล์ภาษา "${lang}" ไม่สำเร็จ (status ${res.status})`);
   }

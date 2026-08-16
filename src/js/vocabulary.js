@@ -46,7 +46,7 @@ const vocabSearchEl = document.getElementById('vocabSearch');
 // ------------------------------------------------------------
 async function loadWords() {
   try {
-    const res = await fetch('../src/data/n5_vocab.json');
+    const res = await fetch('../data/n5_vocab.json');
     if (!res.ok) throw new Error(`โหลด n5_vocab.json ไม่สำเร็จ (status ${res.status})`);
 
     allWords = await res.json(); // แปลงข้อความ json ให้เป็น array ของ object พร้อมใช้งาน
