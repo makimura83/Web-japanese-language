@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>語彙 N5 | คำศัพท์ภาษาญี่ปุ่น</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR =====================
+       หมายเหตุ: header/footer นี้เหมือนกับ index.html ทุกตัวอักษร
+       (เพราะเป็นเว็บแบบหลายไฟล์ ไม่มี "template" กลาง จึงต้อง copy โครงสร้างซ้ำ)
+       ต่างกันแค่จุดเดียวคือใส่ aria-current="page" ให้ลิงก์ "語彙" เพื่อไฮไลต์ว่าอยู่หน้านี้ -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-kanji">語</span>
+      <span class="logo-text">にほんご<small>N5</small></span>
+    </a>
+
+    <div class="header-right">
+      <div class="lang-switch" id="langSwitch">
+        <button type="button" data-lang="th">TH</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.toggle_label" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="vocabulary.html" aria-current="page">語彙 <small data-i18n="label.vocab">คำศัพท์</small></a>
+        <a href="grammar.html">文法 <small data-i18n="label.grammar">ไวยากรณ์</small></a>
+        <a href="quiz.html">小テスト <small data-i18n="label.quiz">แบบทดสอบ</small></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== หัวข้อหน้า ===================== -->
+    <section class="page-hero">
+      <p class="hero-eyebrow" data-i18n="label.vocab">คำศัพท์</p>
+      <h1 class="page-title" data-i18n="vocab.page_title">คำศัพท์ N5</h1>
+      <p class="page-subtitle" data-i18n="vocab.page_subtitle">
+        แตะที่การ์ดเพื่อดูความหมาย ใช้ช่องค้นหาหรือหมวดหมู่ด้านล่างเพื่อกรองคำศัพท์
+      </p>
+    </section>
+
+    <!-- ===================== ตัวกรอง: ค้นหา + หมวดหมู่ ===================== -->
+    <section class="vocab-controls">
+      <input
+        type="text"
+        id="vocabSearch"
+        class="vocab-search"
+        data-i18n-placeholder="vocab.search_placeholder"
+        placeholder="ค้นหาคำศัพท์ (คันจิ, คานะ, โรมาจิ หรือความหมาย)..."
+        autocomplete="off"
+      />
+
+      <!-- ปุ่มหมวดหมู่เหล่านี้ "ไม่ได้" เขียนไว้ตรงๆ ใน HTML แต่ถูกสร้างโดย vocabulary.js
+           จาก category ที่มีอยู่จริงใน n5_vocab.json (ดูฟังก์ชัน renderCategoryChips ในไฟล์นั้น)
+           ทำแบบนี้เพื่อว่าถ้าวันหลังเพิ่มหมวดใหม่ในไฟล์ json ปุ่มจะโผล่มาเองโดยไม่ต้องแก้ HTML -->
+      <div class="category-chips" id="categoryChips"></div>
+
+      <p class="vocab-count" id="vocabCount"></p>
+    </section>
+
+    <!-- ===================== กริดการ์ดคำศัพท์ ===================== -->
+    <section class="vocab-grid" id="vocabGrid" aria-live="polite">
+      <!-- vocabulary.js จะสร้างการ์ดทั้งหมดใส่ตรงนี้หลัง fetch ข้อมูลเสร็จ -->
+      <p class="vocab-loading" id="vocabLoading" data-i18n="vocab.loading">กำลังโหลดคำศัพท์...</p>
+    </section>
+
+    <p class="vocab-no-results" id="vocabNoResults" data-i18n="vocab.no_results" hidden>
+      ไม่พบคำศัพท์ที่ค้นหา ลองคำอื่นดูนะ
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p><span data-i18n="footer.credit">สร้างเพื่อฝึกภาษาญี่ปุ่นระดับ N5</span> · <span id="year"></span></p>
+  </footer>
+
+  <!-- สำคัญ: ต้องเรียงลำดับ i18n.js -> nav.js -> vocabulary.js เสมอ -->
+  <script src="../src/js/i18n.js"></script>
+  <script src="../src/js/nav.js"></script>
+  <script src="../src/js/vocabulary.js"></script>
+</body>
+</html>

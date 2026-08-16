@@ -1,0 +1,90 @@
+[
+  {
+    "id": "g01", "title": "は", "structure": "A は B です", "category": "particles",
+    "explanation": { "th": "は ใช้บอกหัวข้อของประโยค อ่านออกเสียงว่า「わ」ไม่ใช่「は」", "en": "は marks the topic of the sentence. It is pronounced 'wa', not 'ha'.", "ja": "文の主題を表す助詞。「わ」と発音する。" },
+    "example": { "jp": "私は学生です。", "reading": "わたしは がくせいです。", "meaning": { "th": "ฉันเป็นนักเรียน", "en": "I am a student.", "ja": "自分が学生であることを伝える文" } }
+  },
+  {
+    "id": "g02", "title": "が", "structure": "A が 〜", "category": "particles",
+    "explanation": { "th": "が ใช้เน้นประธานของประโยค มักใช้คู่กับกริยาบอกการมีอยู่ เช่น いる/ある", "en": "が marks the subject, often used with existence verbs like いる/ある.", "ja": "主語を表す助詞。存在動詞（いる・ある）とよく使う。" },
+    "example": { "jp": "猫がいます。", "reading": "ねこが います。", "meaning": { "th": "มีแมวอยู่", "en": "There is a cat.", "ja": "猫が存在することを伝える文" } }
+  },
+  {
+    "id": "g03", "title": "を", "structure": "A を 動詞", "category": "particles",
+    "explanation": { "th": "を ใช้บอกกรรมตรงของกริยา (สิ่งที่ถูกกระทำ)", "en": "を marks the direct object of a verb.", "ja": "動詞の目的語を表す助詞。" },
+    "example": { "jp": "水を飲みます。", "reading": "みずを のみます。", "meaning": { "th": "ดื่มน้ำ", "en": "(I) drink water.", "ja": "水を飲む動作を伝える文" } }
+  },
+  {
+    "id": "g04", "title": "に", "structure": "時間/場所 に 〜", "category": "particles",
+    "explanation": { "th": "に ใช้บอกเวลาที่แน่นอน หรือจุดหมายปลายทาง", "en": "に marks a specific point in time, or a destination.", "ja": "時刻や行き先を表す助詞。" },
+    "example": { "jp": "7時に起きます。", "reading": "しちじに おきます。", "meaning": { "th": "ตื่นตอน 7 โมง", "en": "(I) wake up at 7 o'clock.", "ja": "起きる時刻を伝える文" } }
+  },
+  {
+    "id": "g05", "title": "で", "structure": "場所 で 動詞", "category": "particles",
+    "explanation": { "th": "で ใช้บอกสถานที่ที่เกิดการกระทำ หรือวิธีการ/เครื่องมือที่ใช้", "en": "で marks the place where an action happens, or the means/tool used.", "ja": "動作が行われる場所や手段を表す助詞。" },
+    "example": { "jp": "図書館で勉強します。", "reading": "としょかんで べんきょうします。", "meaning": { "th": "อ่านหนังสือที่ห้องสมุด", "en": "(I) study at the library.", "ja": "勉強する場所を伝える文" } }
+  },
+  {
+    "id": "g06", "title": "の", "structure": "A の B", "category": "particles",
+    "explanation": { "th": "の ใช้เชื่อมคำนามสองคำ แสดงความเป็นเจ้าของ", "en": "の connects two nouns to show possession.", "ja": "二つの名詞をつなげて所有を表す助詞。" },
+    "example": { "jp": "私の本です。", "reading": "わたしの ほんです。", "meaning": { "th": "หนังสือของฉัน", "en": "It's my book.", "ja": "自分の持ち物であることを伝える文" } }
+  },
+
+  {
+    "id": "g07", "title": "〜ます", "structure": "動詞(ます形)", "category": "verb_forms",
+    "explanation": { "th": "ます เป็นรูปสุภาพของกริยาในปัจจุบัน/อนาคต", "en": "ます is the polite present/future form of a verb.", "ja": "動詞の丁寧な現在形・未来形。" },
+    "example": { "jp": "毎日、勉強します。", "reading": "まいにち、べんきょうします。", "meaning": { "th": "เรียนหนังสือทุกวัน", "en": "(I) study every day.", "ja": "毎日勉強する習慣を伝える文" } }
+  },
+  {
+    "id": "g08", "title": "〜ました", "structure": "動詞(ます形) + ました", "category": "verb_forms",
+    "explanation": { "th": "ました เป็นรูปสุภาพของกริยาในอดีต", "en": "ました is the polite past tense of a verb.", "ja": "動詞の丁寧な過去形。" },
+    "example": { "jp": "昨日、映画を見ました。", "reading": "きのう、えいがを みました。", "meaning": { "th": "เมื่อวานดูหนัง", "en": "(I) watched a movie yesterday.", "ja": "昨日した行動を伝える文" } }
+  },
+  {
+    "id": "g09", "title": "〜ません", "structure": "動詞(ます形) + ません", "category": "verb_forms",
+    "explanation": { "th": "ません เป็นรูปปฏิเสธสุภาพของกริยาในปัจจุบัน", "en": "ません is the polite negative form of a verb.", "ja": "動詞の丁寧な否定形。" },
+    "example": { "jp": "肉を食べません。", "reading": "にくを たべません。", "meaning": { "th": "ไม่กินเนื้อสัตว์", "en": "(I) don't eat meat.", "ja": "しない行動を伝える文" } }
+  },
+  {
+    "id": "g10", "title": "〜てください", "structure": "動詞(て形) + ください", "category": "verb_forms",
+    "explanation": { "th": "て + ください ใช้ขอร้องหรือสั่งอย่างสุภาพ", "en": "て + ください is used to politely ask or request someone to do something.", "ja": "丁寧に依頼するときに使う表現。" },
+    "example": { "jp": "ちょっと待ってください。", "reading": "ちょっと まってください。", "meaning": { "th": "รอสักครู่นะครับ/ค่ะ", "en": "Please wait a moment.", "ja": "少し待ってほしいという依頼文" } }
+  },
+  {
+    "id": "g11", "title": "〜たいです", "structure": "動詞(ます形) + たいです", "category": "verb_forms",
+    "explanation": { "th": "たいです ใช้บอกความต้องการหรืออยากทำอะไร", "en": "たいです expresses wanting to do something.", "ja": "何かをしたいという気持ちを表す表現。" },
+    "example": { "jp": "日本へ行きたいです。", "reading": "にほんへ いきたいです。", "meaning": { "th": "อยากไปญี่ปุ่น", "en": "(I) want to go to Japan.", "ja": "行きたい気持ちを伝える文" } }
+  },
+
+  {
+    "id": "g12", "title": "〜です", "structure": "名詞 + です", "category": "sentence_patterns",
+    "explanation": { "th": "です ใช้ลงท้ายประโยคบอกเล่าแบบสุภาพ ความหมายเทียบเท่า is/am/are", "en": "です is a polite sentence-ending copula, equivalent to 'is/am/are'.", "ja": "丁寧な文末表現。「is/am/are」に相当。" },
+    "example": { "jp": "これはペンです。", "reading": "これは ぺんです。", "meaning": { "th": "นี่คือปากกา", "en": "This is a pen.", "ja": "これがペンであることを伝える文" } }
+  },
+  {
+    "id": "g13", "title": "〜があります／います", "structure": "場所に 名詞が あります／います", "category": "sentence_patterns",
+    "explanation": { "th": "あります ใช้กับสิ่งไม่มีชีวิต ส่วน います ใช้กับสิ่งมีชีวิต", "en": "あります is used for inanimate things, います for living things.", "ja": "無生物には「あります」、生物には「います」を使う。" },
+    "example": { "jp": "机の上に本があります。", "reading": "つくえのうえに ほんが あります。", "meaning": { "th": "มีหนังสืออยู่บนโต๊ะ", "en": "There is a book on the desk.", "ja": "物がある場所を伝える文" } }
+  },
+  {
+    "id": "g14", "title": "〜ませんか", "structure": "動詞(ます形) + ませんか", "category": "sentence_patterns",
+    "explanation": { "th": "ませんか ใช้ชักชวนผู้อื่นอย่างสุภาพ", "en": "ませんか is used to politely invite someone to do something.", "ja": "丁寧に誘うときに使う表現。" },
+    "example": { "jp": "一緒に食べませんか。", "reading": "いっしょに たべませんか。", "meaning": { "th": "ทานด้วยกันไหม", "en": "Would you like to eat together?", "ja": "一緒に食べることを誘う文" } }
+  },
+  {
+    "id": "g15", "title": "〜から", "structure": "理由から、結果", "category": "sentence_patterns",
+    "explanation": { "th": "から ใช้เชื่อมเหตุผลกับผลลัพธ์", "en": "から connects a reason to a result.", "ja": "理由と結果をつなげる表現。" },
+    "example": { "jp": "寒いから、コートを着ます。", "reading": "さむいから、コートを きます。", "meaning": { "th": "เพราะหนาว ฉันเลยใส่เสื้อโค้ท", "en": "Because it's cold, (I) wear a coat.", "ja": "理由と行動を伝える文" } }
+  },
+
+  {
+    "id": "g16", "title": "〜か", "structure": "文 + か", "category": "questions",
+    "explanation": { "th": "か วางท้ายประโยคเพื่อทำให้เป็นประโยคคำถาม", "en": "か is placed at the end of a sentence to turn it into a question.", "ja": "文末に置いて疑問文を作る助詞。" },
+    "example": { "jp": "これは何ですか。", "reading": "これは なんですか。", "meaning": { "th": "นี่คืออะไร", "en": "What is this?", "ja": "これが何であるかを尋ねる文" } }
+  },
+  {
+    "id": "g17", "title": "何・どこ・だれ", "structure": "何／どこ／だれ + ですか", "category": "questions",
+    "explanation": { "th": "何(なに/なん)=อะไร, どこ=ที่ไหน, だれ=ใคร ใช้ถามหาข้อมูล", "en": "何=what, どこ=where, だれ=who — used to ask for information.", "ja": "「何」「どこ」「だれ」は情報を尋ねる疑問詞。" },
+    "example": { "jp": "これはだれのペンですか。", "reading": "これは だれの ぺんですか。", "meaning": { "th": "นี่เป็นปากกาของใคร", "en": "Whose pen is this?", "ja": "誰の持ち物かを尋ねる文" } }
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "nav.toggle_label": "เปิดเมนู",
+  "label.vocab": "คำศัพท์",
+  "label.grammar": "ไวยากรณ์",
+  "label.quiz": "แบบทดสอบ",
+
+  "hero.eyebrow": "JLPT N5 · เริ่มต้นที่นี่",
+  "hero.desc": "เรียนคำศัพท์ ไวยากรณ์ และทดสอบความเข้าใจ ระดับพื้นฐานที่สุดของ JLPT ทีละก้าว จากศูนย์ ไปให้ถึงประโยคแรกของคุณ",
+  "hero.cta": "เริ่มดูแผนที่บทเรียน ↓",
+
+  "lesson.title": "แผนที่บทเรียน",
+  "lesson.subtitle": "เลือกป้ายไม้ (fuda) ด้านล่าง เพื่อไปยังแต่ละส่วนของการเรียน",
+  "lesson.vocab_desc": "คำศัพท์พื้นฐานที่พบบ่อยที่สุดของระดับ N5",
+  "lesson.grammar_desc": "โครงสร้างประโยคและรูปแบบที่ใช้บ่อยที่สุด",
+  "lesson.quiz_desc": "ทดสอบความจำและความเข้าใจแบบสั้น ๆ",
+
+  "word.title": "คำศัพท์วันนี้",
+  "word.loading": "กำลังโหลด...",
+  "word.new_button": "สุ่มคำใหม่",
+
+  "footer.credit": "สร้างเพื่อฝึกภาษาญี่ปุ่นระดับ N5",
+
+  "vocab.page_title": "คำศัพท์ N5",
+  "vocab.page_subtitle": "แตะที่การ์ดเพื่อดูความหมาย ใช้ช่องค้นหาหรือหมวดหมู่ด้านล่างเพื่อกรองคำศัพท์",
+  "vocab.search_placeholder": "ค้นหาคำศัพท์ (คันจิ, คานะ, โรมาจิ หรือความหมาย)...",
+  "vocab.count_template": "พบ {count} จาก {total} คำ",
+  "vocab.no_results": "ไม่พบคำศัพท์ที่ค้นหา ลองคำอื่นดูนะ",
+  "vocab.flip_hint": "แตะเพื่อดูความหมาย",
+  "vocab.loading": "กำลังโหลดคำศัพท์...",
+
+  "category.all": "ทั้งหมด",
+  "category.greetings": "คำทักทาย",
+  "category.people": "คนและครอบครัว",
+  "category.time": "เวลา",
+  "category.places": "สถานที่",
+  "category.food": "อาหารและเครื่องดื่ม",
+  "category.verbs": "คำกริยา",
+  "category.adjectives": "คำคุณศัพท์",
+  "category.numbers": "ตัวเลข",
+
+  "grammar.page_title": "ไวยากรณ์ N5",
+  "grammar.page_subtitle": "กดที่หัวข้อเพื่อดูคำอธิบายและตัวอย่างประโยค",
+  "grammar.search_placeholder": "ค้นหาไวยากรณ์ (เช่น は, ます, ตัวอย่าง)...",
+  "grammar.count_template": "พบ {count} จาก {total} หัวข้อ",
+  "grammar.no_results": "ไม่พบหัวข้อไวยากรณ์ที่ค้นหา ลองคำอื่นดูนะ",
+  "grammar.loading": "กำลังโหลดไวยากรณ์...",
+  "grammar.structure_label": "โครงสร้าง",
+  "grammar.example_label": "ตัวอย่างประโยค",
+
+  "category.particles": "คำช่วย (助詞)",
+  "category.verb_forms": "รูปกริยา",
+  "category.sentence_patterns": "แพทเทิร์นประโยค",
+  "category.questions": "คำถาม"
+}

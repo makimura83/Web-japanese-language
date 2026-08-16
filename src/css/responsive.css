@@ -1,0 +1,45 @@
+/* ============================================================
+   RESPONSIVE.CSS
+   แนวคิด: "Media Query" คือ if-condition ของ CSS
+   @media (max-width: 768px) { ... }  แปลว่า "ถ้าหน้าจอกว้างไม่เกิน 768px ให้ใช้กฎในนี้"
+   เราเขียนสไตล์หลัก (จอใหญ่) ไว้ใน style.css แล้วมา "แก้ทับ" เฉพาะจอเล็กที่นี่
+   ============================================================ */
+
+/* จอแท็บเล็ตลงมา: การ์ดแผนที่บทเรียนจาก 3 คอลัมน์ -> เหลือ 1 คอลัมน์ */
+@media (max-width: 860px) {
+  .fuda-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* จอมือถือ: ซ่อนเมนูปกติ เปลี่ยนเป็นเมนูแบบเลื่อนลงเมื่อกดปุ่มแฮมเบอร์เกอร์ */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex; /* โผล่ปุ่มแฮมเบอร์เกอร์ */
+  }
+
+  .site-nav {
+    /* ค่าเริ่มต้น: ซ่อนเมนูไว้ก่อน ให้ JS เป็นคนสลับ class "open" ให้ */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--ai);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  /* class นี้ถูกเติม/ถอดโดย JavaScript ตอนกดปุ่ม (ดู app.js) */
+  .site-nav.open {
+    max-height: 240px;
+  }
+
+  .site-nav a {
+    padding: 0.9rem 1.5rem;
+    border-top: 1px solid rgba(243,238,221,0.15);
+  }
+
+  .hero { padding: 3.5rem 1.2rem 2rem; }
+}

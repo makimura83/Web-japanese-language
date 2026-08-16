@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+  ไฟล์นี้คือ "โครงกระดูก" ของหน้าเว็บ (HTML = HyperText Markup Language)
+  ถ้าเทียบกับ Python: HTML เหมือนการนิยาม "โครงสร้างข้อมูล" ว่าอะไรอยู่ตรงไหน
+  ส่วน CSS = การจัดหน้าตา (เหมือน format ตัวแปร)
+  และ JS   = ตรรกะ/พฤติกรรม (เหมือนฟังก์ชันที่ทำงานตอนมีเหตุการณ์ เช่น กดปุ่ม)
+-->
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>にほんご N5 | เริ่มต้นเรียนภาษาญี่ปุ่น</title>
+
+  <!-- ฟอนต์จาก Google Fonts: ตัวหนา/มีเอกลักษณ์ไว้ทำหัวข้อ (Shippori Mincho เป็นฟอนต์เส้นพู่กันญี่ปุ่น)
+       ส่วน Zen Kaku Gothic New ไว้ใช้เป็นตัวเนื้อหาให้อ่านง่าย -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <!-- ลิงก์ไฟล์ CSS ของเราเอง: path เป็น ../ เพราะไฟล์นี้อยู่ใน pages/ ต้องถอยออกมา 1 ชั้นก่อนเข้า src/ -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-kanji">語</span>
+      <span class="logo-text">にほんご<small>N5</small></span>
+    </a>
+
+    <div class="header-right">
+      <!-- ปุ่มสลับภาษา: data-lang บอกว่าปุ่มนี้กดแล้วจะเปลี่ยนไปภาษาอะไร (อ่านค่าโดย i18n.js) -->
+      <div class="lang-switch" id="langSwitch">
+        <button type="button" data-lang="th">TH</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+
+      <!-- ปุ่มแฮมเบอร์เกอร์ จะโผล่มาเฉพาะจอมือถือ (ควบคุมด้วย CSS + JS) -->
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.toggle_label" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="vocabulary.html">語彙 <small data-i18n="label.vocab">คำศัพท์</small></a>
+        <a href="grammar.html">文法 <small data-i18n="label.grammar">ไวยากรณ์</small></a>
+        <a href="quiz.html">小テスト <small data-i18n="label.quiz">แบบทดสอบ</small></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">JLPT N5 · เริ่มต้นที่นี่</p>
+      <h1 class="hero-title">
+        <!-- ส่วนนี้ตั้งใจไม่ใส่ data-i18n เพราะ "日本語" คือชื่อวิชา/หัวใจของดีไซน์
+             ไม่ใช่ข้อความ UI ทั่วไป จึงให้เป็นภาษาญี่ปุ่นเสมอไม่ว่าจะสลับภาษาหน้าเว็บเป็นอะไร -->
+        <span lang="ja">日本語</span>
+        <span class="hero-title-sub">に、ようこそ</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero.desc">
+        เรียนคำศัพท์ ไวยากรณ์ และทดสอบความเข้าใจ ระดับพื้นฐานที่สุดของ JLPT
+        ทีละก้าว จากศูนย์ ไปให้ถึงประโยคแรกของคุณ
+      </p>
+      <a href="#lesson-map" class="btn-primary" data-i18n="hero.cta">เริ่มดูแผนที่บทเรียน ↓</a>
+    </section>
+
+    <!-- เส้นแบ่งรูปโทริอิ (ประตูศาลเจ้า) — เป็น "ลายเซ็น" ของดีไซน์หน้านี้ วาดด้วย SVG ล้วน ไม่ใช้รูปภาพ -->
+    <div class="torii-divider" aria-hidden="true">
+      <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+        <rect x="18" y="10" width="8" height="46" />
+        <rect x="174" y="10" width="8" height="46" />
+        <rect x="8" y="8" width="184" height="8" />
+        <rect x="0" y="20" width="200" height="6" />
+      </svg>
+    </div>
+
+    <!-- ===================== แผนที่บทเรียน ===================== -->
+    <section class="lesson-map" id="lesson-map">
+      <h2 data-i18n="lesson.title">แผนที่บทเรียน</h2>
+      <p class="section-sub" data-i18n="lesson.subtitle">เลือกป้ายไม้ (fuda) ด้านล่าง เพื่อไปยังแต่ละส่วนของการเรียน</p>
+
+      <!-- fuda-kanji/fuda-kana ไม่ใส่ data-i18n เพราะเป็น "เนื้อหาที่กำลังสอน" (คำศัพท์ภาษาญี่ปุ่นจริง)
+           ไม่ใช่ข้อความ UI จึงต้องคงเป็นภาษาญี่ปุ่นเสมอ ส่วน label/desc คือ UI จึงแปลได้ -->
+      <div class="fuda-grid">
+        <a href="vocabulary.html" class="fuda">
+          <span class="fuda-kanji">語彙</span>
+          <span class="fuda-kana">ごい</span>
+          <span class="fuda-label" data-i18n="label.vocab">คำศัพท์</span>
+          <span class="fuda-desc" data-i18n="lesson.vocab_desc">คำศัพท์พื้นฐานที่พบบ่อยที่สุดของระดับ N5</span>
+        </a>
+
+        <a href="grammar.html" class="fuda">
+          <span class="fuda-kanji">文法</span>
+          <span class="fuda-kana">ぶんぽう</span>
+          <span class="fuda-label" data-i18n="label.grammar">ไวยากรณ์</span>
+          <span class="fuda-desc" data-i18n="lesson.grammar_desc">โครงสร้างประโยคและรูปแบบที่ใช้บ่อยที่สุด</span>
+        </a>
+
+        <a href="quiz.html" class="fuda">
+          <span class="fuda-kanji">小テスト</span>
+          <span class="fuda-kana">しょうてすと</span>
+          <span class="fuda-label" data-i18n="label.quiz">แบบทดสอบ</span>
+          <span class="fuda-desc" data-i18n="lesson.quiz_desc">ทดสอบความจำและความเข้าใจแบบสั้น ๆ</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== คำศัพท์ประจำวัน ===================== -->
+    <section class="word-of-day">
+      <h2 data-i18n="word.title">คำศัพท์วันนี้</h2>
+      <!-- ข้อความในการ์ดนี้ถูกเติมโดย JavaScript ใน app.js (ดูคอมเมนต์ในไฟล์นั้น) -->
+      <div class="word-card" id="wordCard">
+        <p class="word-kanji" id="wordKanji">—</p>
+        <p class="word-kana" id="wordKana">—</p>
+        <p class="word-meaning" id="wordMeaning" data-i18n="word.loading">กำลังโหลด...</p>
+      </div>
+      <button class="btn-secondary" id="newWordBtn" data-i18n="word.new_button">สุ่มคำใหม่</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><span data-i18n="footer.credit">สร้างเพื่อฝึกภาษาญี่ปุ่นระดับ N5</span> · <span id="year"></span></p>
+  </footer>
+
+  <!-- สำคัญ: ต้องเรียงลำดับ i18n.js -> nav.js -> app.js เสมอ
+       เพราะ nav.js/app.js อาจต้องพึ่งพา element หรือ event ที่ i18n.js เตรียมไว้ -->
+  <script src="../src/js/i18n.js"></script>
+  <script src="../src/js/nav.js"></script>
+  <script src="../src/js/app.js"></script>
+</body>
+</html>

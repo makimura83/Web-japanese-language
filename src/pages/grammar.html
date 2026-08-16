@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文法 N5 | ไวยากรณ์ภาษาญี่ปุ่น</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR (เหมือนหน้าอื่นทุกตัวอักษร ต่างแค่ aria-current) ===================== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-kanji">語</span>
+      <span class="logo-text">にほんご<small>N5</small></span>
+    </a>
+
+    <div class="header-right">
+      <div class="lang-switch" id="langSwitch">
+        <button type="button" data-lang="th">TH</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.toggle_label" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="vocabulary.html">語彙 <small data-i18n="label.vocab">คำศัพท์</small></a>
+        <a href="grammar.html" aria-current="page">文法 <small data-i18n="label.grammar">ไวยากรณ์</small></a>
+        <a href="quiz.html">小テスト <small data-i18n="label.quiz">แบบทดสอบ</small></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== หัวข้อหน้า ===================== -->
+    <section class="page-hero">
+      <p class="hero-eyebrow" data-i18n="label.grammar">ไวยากรณ์</p>
+      <h1 class="page-title" data-i18n="grammar.page_title">ไวยากรณ์ N5</h1>
+      <p class="page-subtitle" data-i18n="grammar.page_subtitle">
+        กดที่หัวข้อเพื่อดูคำอธิบายและตัวอย่างประโยค
+      </p>
+    </section>
+
+    <!-- ===================== ตัวกรอง: ค้นหา + หมวดหมู่ ===================== -->
+    <section class="vocab-controls">
+      <input
+        type="text"
+        id="grammarSearch"
+        class="vocab-search"
+        data-i18n-placeholder="grammar.search_placeholder"
+        placeholder="ค้นหาไวยากรณ์ (เช่น は, ます, ตัวอย่าง)..."
+        autocomplete="off"
+      />
+
+      <!-- ปุ่มหมวดหมู่ถูกสร้างโดย grammar.js จาก category ที่มีจริงในไฟล์ n5_grammar.json -->
+      <div class="category-chips" id="grammarChips"></div>
+
+      <p class="vocab-count" id="grammarCount"></p>
+    </section>
+
+    <!-- ===================== รายการหัวข้อไวยากรณ์ (accordion) ===================== -->
+    <!-- แต่ละหัวข้อจะถูกสร้างเป็น <details><summary> โดย grammar.js
+         <details>/<summary> คือ HTML element มาตรฐานที่พับ-กางได้ในตัว ไม่ต้องเขียน JS จัดการ
+         การเปิด-ปิดเองเลย (JS แค่สร้าง element พวกนี้ขึ้นมาเท่านั้น) -->
+    <section class="grammar-list" id="grammarList" aria-live="polite">
+      <p class="vocab-loading" id="grammarLoading" data-i18n="grammar.loading">กำลังโหลดไวยากรณ์...</p>
+    </section>
+
+    <p class="vocab-no-results" id="grammarNoResults" data-i18n="grammar.no_results" hidden>
+      ไม่พบหัวข้อไวยากรณ์ที่ค้นหา ลองคำอื่นดูนะ
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p><span data-i18n="footer.credit">สร้างเพื่อฝึกภาษาญี่ปุ่นระดับ N5</span> · <span id="year"></span></p>
+  </footer>
+
+  <!-- สำคัญ: ต้องเรียงลำดับ i18n.js -> nav.js -> grammar.js เสมอ -->
+  <script src="../src/js/i18n.js"></script>
+  <script src="../src/js/nav.js"></script>
+  <script src="../src/js/grammar.js"></script>
+</body>
+</html>

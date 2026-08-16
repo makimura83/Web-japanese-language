@@ -1,0 +1,54 @@
+{
+  "nav.toggle_label": "Open menu",
+  "label.vocab": "Vocabulary",
+  "label.grammar": "Grammar",
+  "label.quiz": "Quiz",
+
+  "hero.eyebrow": "JLPT N5 · Start here",
+  "hero.desc": "Learn core vocabulary and grammar, then test your understanding at the most basic JLPT level — one step at a time, from zero to your first sentence.",
+  "hero.cta": "See the lesson map ↓",
+
+  "lesson.title": "Lesson map",
+  "lesson.subtitle": "Pick a wooden tablet (fuda) below to jump to each part of the course",
+  "lesson.vocab_desc": "The most common core words at N5 level",
+  "lesson.grammar_desc": "Sentence structures and patterns you'll use most",
+  "lesson.quiz_desc": "Short tests to check your memory and understanding",
+
+  "word.title": "Word of the day",
+  "word.loading": "Loading...",
+  "word.new_button": "New word",
+
+  "footer.credit": "Built for practicing Japanese at N5 level",
+
+  "vocab.page_title": "N5 Vocabulary",
+  "vocab.page_subtitle": "Tap a card to reveal its meaning. Use search or category filters below to narrow the list.",
+  "vocab.search_placeholder": "Search words (kanji, kana, romaji, or meaning)...",
+  "vocab.count_template": "Showing {count} of {total} words",
+  "vocab.no_results": "No words matched your search. Try something else.",
+  "vocab.flip_hint": "Tap to reveal meaning",
+  "vocab.loading": "Loading vocabulary...",
+
+  "category.all": "All",
+  "category.greetings": "Greetings",
+  "category.people": "People & family",
+  "category.time": "Time",
+  "category.places": "Places",
+  "category.food": "Food & drink",
+  "category.verbs": "Verbs",
+  "category.adjectives": "Adjectives",
+  "category.numbers": "Numbers",
+
+  "grammar.page_title": "N5 Grammar",
+  "grammar.page_subtitle": "Tap a topic to see its explanation and example sentence",
+  "grammar.search_placeholder": "Search grammar (e.g. は, ます, example)...",
+  "grammar.count_template": "Showing {count} of {total} topics",
+  "grammar.no_results": "No grammar topics matched your search. Try something else.",
+  "grammar.loading": "Loading grammar...",
+  "grammar.structure_label": "Structure",
+  "grammar.example_label": "Example sentence",
+
+  "category.particles": "Particles (助詞)",
+  "category.verb_forms": "Verb forms",
+  "category.sentence_patterns": "Sentence patterns",
+  "category.questions": "Questions"
+}

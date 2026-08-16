@@ -1,0 +1,54 @@
+{
+  "nav.toggle_label": "メニューを開く",
+  "label.vocab": "語彙",
+  "label.grammar": "文法",
+  "label.quiz": "テスト",
+
+  "hero.eyebrow": "JLPT N5 · ここから始めよう",
+  "hero.desc": "基本の語彙と文法を学び、理解度を確認しよう。JLPT最初のレベルを一歩ずつ、ゼロから最初の一文まで。",
+  "hero.cta": "レッスンマップを見る ↓",
+
+  "lesson.title": "レッスンマップ",
+  "lesson.subtitle": "下の木札（ふだ）を選んで、各セクションに進みましょう",
+  "lesson.vocab_desc": "N5レベルで最も基本的な単語",
+  "lesson.grammar_desc": "よく使う文型と文法パターン",
+  "lesson.quiz_desc": "記憶と理解を確認する短いテスト",
+
+  "word.title": "今日の単語",
+  "word.loading": "読み込み中...",
+  "word.new_button": "新しい単語",
+
+  "footer.credit": "N5レベルの日本語学習のために作成",
+
+  "vocab.page_title": "N5 単語",
+  "vocab.page_subtitle": "カードをタップすると意味が見えます。下の検索やカテゴリーで絞り込めます。",
+  "vocab.search_placeholder": "単語を検索（漢字・かな・ローマ字・意味）...",
+  "vocab.count_template": "{total}件中 {count}件を表示",
+  "vocab.no_results": "見つかりませんでした。別の言葉で検索してみてください。",
+  "vocab.flip_hint": "タップして意味を見る",
+  "vocab.loading": "単語を読み込み中...",
+
+  "category.all": "すべて",
+  "category.greetings": "あいさつ",
+  "category.people": "人・家族",
+  "category.time": "時間",
+  "category.places": "場所",
+  "category.food": "食べ物・飲み物",
+  "category.verbs": "動詞",
+  "category.adjectives": "形容詞",
+  "category.numbers": "数字",
+
+  "grammar.page_title": "N5 文法",
+  "grammar.page_subtitle": "トピックをタップすると説明と例文が見えます",
+  "grammar.search_placeholder": "文法を検索（例：は、ます、例文）...",
+  "grammar.count_template": "{total}件中 {count}件を表示",
+  "grammar.no_results": "見つかりませんでした。別の言葉で検索してみてください。",
+  "grammar.loading": "文法を読み込み中...",
+  "grammar.structure_label": "構造",
+  "grammar.example_label": "例文",
+
+  "category.particles": "助詞",
+  "category.verb_forms": "動詞の形",
+  "category.sentence_patterns": "文型",
+  "category.questions": "疑問文"
+}
