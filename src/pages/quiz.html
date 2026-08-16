@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小テスト N5 | แบบทดสอบภาษาญี่ปุ่น</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../src/css/style.css" />
+  <link rel="stylesheet" href="../src/css/responsive.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR (เหมือนหน้าอื่นทุกตัวอักษร ต่างแค่ aria-current) ===================== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-kanji">語</span>
+      <span class="logo-text">にほんご<small>N5</small></span>
+    </a>
+
+    <div class="header-right">
+      <div class="lang-switch" id="langSwitch">
+        <button type="button" data-lang="th">TH</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" data-i18n-aria="nav.toggle_label" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="vocabulary.html">語彙 <small data-i18n="label.vocab">คำศัพท์</small></a>
+        <a href="grammar.html">文法 <small data-i18n="label.grammar">ไวยากรณ์</small></a>
+        <a href="quiz.html" aria-current="page">小テスト <small data-i18n="label.quiz">แบบทดสอบ</small></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== 1) หน้าจอเลือกประเภทแบบทดสอบ ===================== -->
+    <section class="page-hero">
+      <p class="hero-eyebrow" data-i18n="label.quiz">แบบทดสอบ</p>
+      <h1 class="page-title" data-i18n="quiz.page_title">แบบทดสอบ N5</h1>
+      <p class="page-subtitle" data-i18n="quiz.page_subtitle">เลือกประเภทแบบทดสอบด้านล่าง แล้วลองตอบดู</p>
+    </section>
+
+    <section class="quiz-setup" id="quizSetup">
+      <!-- คลิกที่การ์ดใดการ์ดหนึ่ง จะเริ่มแบบทดสอบทันที (ไม่ต้องกดปุ่ม "เริ่ม" แยกอีกที) -->
+      <div class="quiz-type-grid">
+        <button type="button" class="quiz-type-btn" data-quiz-type="vocab">
+          <span class="quiz-type-kanji">語彙</span>
+          <span class="quiz-type-label" data-i18n="label.vocab">คำศัพท์</span>
+        </button>
+        <button type="button" class="quiz-type-btn" data-quiz-type="grammar">
+          <span class="quiz-type-kanji">文法</span>
+          <span class="quiz-type-label" data-i18n="label.grammar">ไวยากรณ์</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== 2) หน้าจอทำแบบทดสอบ (ซ่อนไว้ก่อน จนกว่าจะเลือกประเภท) ===================== -->
+    <section class="quiz-play" id="quizPlay" hidden>
+      <p class="quiz-progress" id="quizProgress"></p>
+
+      <div class="quiz-question-card">
+        <p class="quiz-question-main" id="quizMain"></p>
+        <p class="quiz-question-sub" id="quizSub"></p>
+      </div>
+
+      <div class="quiz-options" id="quizOptions"></div>
+
+      <button type="button" class="btn-primary quiz-next-btn" id="quizNextBtn" hidden></button>
+    </section>
+
+    <!-- ===================== 3) หน้าจอผลลัพธ์ (ซ่อนไว้ก่อน จนกว่าจะตอบครบ) ===================== -->
+    <section class="quiz-result" id="quizResult" hidden>
+      <h2 data-i18n="quiz.result_title">ผลลัพธ์</h2>
+      <p class="quiz-score" id="quizScoreText"></p>
+      <p class="quiz-score-message" id="quizScoreMessage"></p>
+      <div class="quiz-result-buttons">
+        <button type="button" class="btn-primary" id="quizRetryBtn" data-i18n="quiz.retry_button">ทำแบบทดสอบชุดนี้อีกครั้ง</button>
+        <button type="button" class="btn-secondary" id="quizNewBtn" data-i18n="quiz.new_quiz_button">เลือกแบบทดสอบใหม่</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><span data-i18n="footer.credit">สร้างเพื่อฝึกภาษาญี่ปุ่นระดับ N5</span> · <span id="year"></span></p>
+  </footer>
+
+  <!-- สำคัญ: ต้องเรียงลำดับ i18n.js -> nav.js -> quiz.js เสมอ -->
+  <script src="../src/js/i18n.js"></script>
+  <script src="../src/js/nav.js"></script>
+  <script src="../src/js/quiz.js"></script>
+</body>
+</html>
